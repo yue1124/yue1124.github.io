@@ -1,0 +1,36 @@
+baseURL = 'https://yue1124.github.io/'
+languageCode = 'zh-cn'
+theme = 'hero'
+
+[params]
+    title = 'Big Yue'
+    author = 'bigyue'
+    description = '这是一个博客网站'
+
+[outputs]
+    home = ['HTML', 'JSON'] # index.json is used for search
+
+[[menu.main]]
+    name = '标签'
+    pre = "<i class='fas fa-tags'></i>"
+    url = '/tags/'
+
+[[menu.main]]
+    name = '分类'
+    pre = "<i class='fas fa-asterisk'></i>"
+    url = '/categories/'
+
+[[menu.main]]
+    name = '相关信息'
+    pre = "<i class='fas fa-user'></i>"
+    url = '/about/'
+
+[[params.socials]]
+    name = 'github'
+    pre = "<i class='fab fa-github'></i>"
+    url = 'https://github.com/yue1124'
+
+[[params.socials]]
+    name = 'gitee'
+    pre = "<i class='fab fa-github'></i>"
+    url = 'https://gitee.com/bigyue'
