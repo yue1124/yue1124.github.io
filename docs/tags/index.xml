@@ -5,6 +5,25 @@
     <link>https://yue1124.github.io/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://yue1124.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 16 Oct 2021 04:58:56 +0800</lastBuildDate><atom:link href="https://yue1124.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>https://yue1124.github.io/tags/hugo/</link>
+      <pubDate>Sat, 16 Oct 2021 04:58:56 +0800</pubDate>
+      
+      <guid>https://yue1124.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>https://yue1124.github.io/tags/template/</link>
+      <pubDate>Sat, 16 Oct 2021 04:58:56 +0800</pubDate>
+      
+      <guid>https://yue1124.github.io/tags/template/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

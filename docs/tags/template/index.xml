@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>template on </title>
+    <link>https://yue1124.github.io/tags/template/</link>
+    <description>Recent content in template on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 16 Oct 2021 04:58:56 +0800</lastBuildDate><atom:link href="https://yue1124.github.io/tags/template/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Something About Hugo Templating</title>
+      <link>https://yue1124.github.io/posts/something-about-hugo-templating/</link>
+      <pubDate>Sat, 16 Oct 2021 04:58:56 +0800</pubDate>
+      
+      <guid>https://yue1124.github.io/posts/something-about-hugo-templating/</guid>
+      <description>Hugo 使用Go的html/template以及text/template标准库作为templating的基础。
+所以如果要更深入地了解Hugo中的Templating，可以将标准库再深入看看。
+基本语法 Go Templates基本应用再HTML文件中，使用{{ }}包裹，Go Template会解析对应地变量或者执行相应的方法。
+变量
+已存在的变量 {{ .Title }}
+ 在Hugo中，会给每个template传递Page对象作为template中变量的默认作用域，所以上述的{{ .Title }}实际上访问的是Page对象中的Title参数。这个Page对象通常也称为Context上下文对象，所谓的{{ . }}其实指向的是上下文对象。
+ 自定义的变量{{ $address }}
+ 声明自定义的变量时赋值 {{ $address := &amp;quot;123 st&amp;quot; }}
+为已声明的自定义变量再赋值 {{ $address = &amp;quot;1 st&amp;quot; }}
+ 方法
+{{ FUNCTION ARG1 ARG2 .. }} eg: {{ add 1 2 }} 将执行add方法，并将1，2作为参数
+Hugo提供了一些基础的方法，当然也会教会我们如何扩展方法，不过使用扩展的方法可能需要重新编译Hugo。
+Includes方式 在模板中include其他模板是非常常见的功能。
+在Hugo中提供partial方法和template方法来包含其他模板。
+{{ partial &amp;quot;hearder.html&amp;quot; . }}
+ 该方法将会包含layouts/partials/header.html文件
+不要忘了最后的一个点 能够将上下文信息传递给所包含的模板
+ {{ template &amp;quot;_internal/&amp;lt;TEMPLATE&amp;gt;.&amp;lt;EXTENSION&amp;gt;&amp;quot; }}</description>
+    </item>
+    
+  </channel>
+</rss>
