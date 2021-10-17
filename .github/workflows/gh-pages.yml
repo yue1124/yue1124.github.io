@@ -6,6 +6,10 @@ name: github pages
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
+    paths-ignore:
+      - 'images/**'
+      - 'LICENSE'
+      - 'README.md'
     branches: 
       - main
   pull_request:
@@ -13,12 +17,16 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   depoly:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
-          fetch-depth: 0
+      - name: Git checkout
+        uses: actions/checkout@v2
+      
+      - name: Get theme
+        run: git submodule update --init --recursive
+      
+      - name: Update theme to latest
+        run: git submodule update --remote --merge
       
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -29,8 +37,8 @@ jobs:
         run: hugo --minify
       
       - name: Deploy
-        uses: peaceiris/actions-gp-pages@v3
+        uses: peaceiris/actions-gh-pages@v3
         if: github.ref === 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./public
